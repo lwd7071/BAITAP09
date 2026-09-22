@@ -1,0 +1,2 @@
+IF DB_ID(N'vidu2_db') IS NULL CREATE DATABASE vidu2_db;
+GO
