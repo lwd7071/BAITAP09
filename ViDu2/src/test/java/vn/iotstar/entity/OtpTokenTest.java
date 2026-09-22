@@ -1,0 +1,1 @@
+package vn.iotstar.entity; import org.junit.jupiter.api.Test; import java.time.*; import static org.junit.jupiter.api.Assertions.*; class OtpTokenTest{@Test void otpExpiresOrCannotBeReused(){var t=new OtpToken("a","123456",OtpPurpose.REGISTER,LocalDateTime.now().plusMinutes(1));assertTrue(t.valid("123456"));t.setUsed(true);assertFalse(t.valid("123456"));}}
