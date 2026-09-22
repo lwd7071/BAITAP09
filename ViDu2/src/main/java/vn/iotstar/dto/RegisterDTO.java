@@ -1,0 +1,1 @@
+package vn.iotstar.dto; import jakarta.validation.constraints.*; import lombok.*; @Getter @Setter public class RegisterDTO{@NotBlank String username; @Email @NotBlank String email; @NotBlank String fullName; @Size(min=6) String password; @Size(min=6) String confirmPassword;}

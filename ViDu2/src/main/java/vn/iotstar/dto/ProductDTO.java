@@ -1,0 +1,1 @@
+package vn.iotstar.dto; import jakarta.validation.constraints.*; import lombok.*; import java.math.*; @Getter @Setter public class ProductDTO{Long id; @NotBlank String name; @NotNull @Positive BigDecimal price; String description; Long categoryId; String imageUrl;}

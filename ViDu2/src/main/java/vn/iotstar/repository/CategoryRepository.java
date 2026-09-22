@@ -1,0 +1,1 @@
+package vn.iotstar.repository; import vn.iotstar.entity.Category; import org.springframework.data.jpa.repository.*; import org.springframework.data.domain.*; import java.util.*; public interface CategoryRepository extends JpaRepository<Category,Long>{Optional<Category> findByNameIgnoreCase(String n); Page<Category> findByNameContainingIgnoreCase(String n,Pageable p);}

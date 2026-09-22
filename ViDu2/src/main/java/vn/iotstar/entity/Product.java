@@ -1,0 +1,2 @@
+package vn.iotstar.entity; import jakarta.persistence.*; import lombok.*; import java.math.*; import java.time.*;
+@Entity @Getter @Setter @NoArgsConstructor public class Product { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; @Column(nullable=false) String name; @Column(nullable=false,precision=15,scale=2) BigDecimal price; String description; String imageUrl; LocalDateTime createdAt=LocalDateTime.now(); @ManyToOne(optional=false) User user; @ManyToOne(optional=false) Category category; }

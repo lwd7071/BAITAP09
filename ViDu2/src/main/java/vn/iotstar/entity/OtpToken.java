@@ -1,0 +1,2 @@
+package vn.iotstar.entity; import jakarta.persistence.*; import lombok.*; import java.time.*;
+@Entity @Getter @Setter @NoArgsConstructor public class OtpToken { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) Long id; String email; String code; @Enumerated(EnumType.STRING) OtpPurpose purpose; LocalDateTime expiresAt; boolean used; public OtpToken(String e,String c,OtpPurpose p,LocalDateTime x){email=e;code=c;purpose=p;expiresAt=x;} public boolean valid(String c){return !used&&expiresAt.isAfter(LocalDateTime.now())&&code.equals(c);} }

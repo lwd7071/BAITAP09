@@ -1,0 +1,1 @@
+package vn.iotstar.repository; import vn.iotstar.entity.*; import org.springframework.data.jpa.repository.*; import java.util.*; public interface OtpTokenRepository extends JpaRepository<OtpToken,Long>{Optional<OtpToken> findTopByEmailAndPurposeAndUsedFalseOrderByIdDesc(String e,OtpPurpose p); void deleteByEmailAndPurpose(String e,OtpPurpose p);}

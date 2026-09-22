@@ -1,0 +1,1 @@
+package vn.iotstar.repository; import vn.iotstar.entity.Product; import org.springframework.data.jpa.repository.*; import org.springframework.data.domain.*; public interface ProductRepository extends JpaRepository<Product,Long>{Page<Product> findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(String a,String b,Pageable p);}
